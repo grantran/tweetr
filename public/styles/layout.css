@@ -25,17 +25,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {
+ main {
   position: relative; 
-  width: 650px; 
+  width: 450px; 
   margin: 0 auto; 
   background-color: white; 
   top: 140px
-
-  
  }
 
-
-test {
-  background-color: white;
-}

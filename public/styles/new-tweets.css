@@ -1,9 +1,12 @@
 .new-tweet {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 2px;
-  /*border: 10px solid #eee;*/
+  background-color: #eee;
   border-radius: 10px;
+  margin-right: 2em; 
+  margin-left: 2em; 
+  position: relative;
 }
 
 textarea {
@@ -21,4 +24,8 @@ h2::after {
 
 .counter {
   float:right;
+}
+
+.negative {
+  color: red;
 }
