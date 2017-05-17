@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
   function renderTweets(tweets) {
+    $("#tweets-container").empty();
     tweets.forEach(tweet => {
-      $("#tweets-container").append(createTweetElement(tweet));
+      $("#tweets-container").prepend(createTweetElement(tweet));
 
     })
   };
@@ -64,7 +65,7 @@ $(document).ready(function () {
         data: tweetForm.serialize()
       }).done(function () {
         $("textarea").val("");
-        $("#tweets-container").empty();
+        $(".counter").text(140);
         loadTweets();
       })
     } 
@@ -87,9 +88,9 @@ $(document).ready(function () {
 
   $("#compose").on('click', function () {
     if ($(".new-tweet").is(":hidden")) {
-      $(".new-tweet").show(function () { $("textarea").focus()});
+      $(".new-tweet").slideToggle(function () { $("textarea").focus()});
     } else if ($(".new-tweet").is(":visible")) {
-      $(".new-tweet").hide("slow");
+      $(".new-tweet").slideToggle("slow");
     }
   });
 

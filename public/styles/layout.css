@@ -30,13 +30,18 @@ body {
   width: 450px; 
   margin: 0 auto; 
   background-color: white; 
-  top: 140px
+  padding-top: 140px
  }
 
 /* Rendering hard coded tweet */
 
 .tweet {
   border: 1px solid black;
+  opacity: 0.8;
+}
+
+.tweet:hover {
+  opacity: 1;
 }
 
  .tweet header {
