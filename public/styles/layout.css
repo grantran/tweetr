@@ -46,9 +46,13 @@ body {
   /*border: 1px solid black;*/
 }
 
-/*.tweet:hover {
-  background-color: purple;
-}*/
+.tweet:hover > header > h3 {
+  text-decoration: underline;
+}
+
+.tweet:hover > header > h4 {
+  text-decoration: underline;
+}
 
 .tweet header img {
   position: relative;

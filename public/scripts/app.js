@@ -53,24 +53,56 @@ $(document).ready(function () {
   };
 
   function createTweetElement(tweet) {
+    // create an article tag that will be the parent tag
+    // for the tweet -- all other tags will be children to the article
     var $tweet = $('<article>').addClass('tweet');
+
+    // make header tag for user info: avatar, username, handle
     var $header = $('<header>');
+
+    // children tag to the header
     $('<img>').attr("src", tweet.user.avatars.small).appendTo($header);
     $('<h3>').text(tweet.user.name).appendTo($header);
     $('<h4>').text(tweet.user.handle).appendTo($header);
+    // attach the header to article
     $tweet.append($header);
 
+    // the actual tweet - 1 div tag, then append to article 
     var $contentDiv = $('<div>').text(tweet.content.text);
     $tweet.append($contentDiv);
 
+
+    // footer tag for date + hover items (i.e likes)
     var $footer = $('<footer>')
+
+    // to make a block-level tag, a <div> is used to hold both the date (text)
+    // and the <img> 
     var $heart = $('<img>').attr("src", "https://pbs.twimg.com/profile_images/590217295756144640/Ezn1xQBC_400x400.jpg");
     var $footerDiv = $('<div>').text(tweet.created_at).append($heart);
     $footer.append($footerDiv);
     $tweet.append($footer);
+
+    // returns article tag + all children 
+    // this is for 1 tweet 
     return $tweet;
   }
 
   renderTweets(data);
+
+  // stopDefault on form submission
+
+  var tweetForm = $("#tweet-submission");
+
+  tweetForm.submit(function (event) {
+    event.preventDefault();
+
+    $.ajax({
+      url:"/tweets",
+      method: "POST",
+      data: tweetForm.serialize(),
+      dataType: "json"
+    })
+  });
+
 
 });
