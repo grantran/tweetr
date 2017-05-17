@@ -22,3 +22,8 @@ nav {
   line-height: 80px;
   float: left;
 }
+
+#compose {
+  float: right;
+  border: 1px solid red;
+}
