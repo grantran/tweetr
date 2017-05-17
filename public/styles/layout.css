@@ -86,7 +86,7 @@ footer::before {
   background: black;
 }
 
-span {
+.tweet footer div {
   height: 30px;
   margin: 2px;
   /*background-color: #eee;*/
@@ -94,14 +94,17 @@ span {
   width: 100%;
 }
 
-footer > img {
+footer > div > img {
   display: none;
 }
 
-.tweet:hover > footer > img {
+.tweet:hover > footer > div > img {
   display: block;
-  height: 18px;
+  position: relative;
   float: right;
+  padding-right: 2px;
+  height: 18px;
+  /*border: 1px solid red;*/
 }
 
 
