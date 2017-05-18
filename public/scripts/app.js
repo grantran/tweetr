@@ -86,14 +86,13 @@ $(document).ready(function () {
     $.ajax({
       url: "/tweets",
       method: "GET",
-      data: tweets = []
     }).done(function(tweets) {
       renderTweets(tweets);
     })
   };
 
   loadTweets();
-  // console.log(moment(1461113796368).format("MM/DD/YYYY"));
+
 
   //
 

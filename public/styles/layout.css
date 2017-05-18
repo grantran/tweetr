@@ -82,6 +82,7 @@ body {
 
 .tweet div {
   height: 80px;
+  word-wrap: break-word;
   margin: 3px;
   /*border: 1px solid blue;*/
   width: 100%;
