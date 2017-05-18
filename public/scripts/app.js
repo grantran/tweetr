@@ -35,8 +35,12 @@ $(document).ready(function () {
     // and the <img>
     var createdDate = moment(tweet.created_at).format("YYYY-MM-DD HH:mm"); 
 
-    var $heart = $('<img>').attr("src", "https://pbs.twimg.com/profile_images/590217295756144640/Ezn1xQBC_400x400.jpg");
+    var $heart = $('<img id="like">').attr("src", "/images/empty_heart.png");
+    var $flag = $('<img id="flag">').attr("src", "/images/empty_flag.png");
+    var $retweet = $('<img id="retweet">').attr("src", "/images/empty_rt.png");
     var $footerDiv = $('<div>').text(createdDate).append($heart);
+    $flag.appendTo($footerDiv);
+    $retweet.appendTo($footerDiv);
     $footer.append($footerDiv);
     $tweet.append($footer);
 
