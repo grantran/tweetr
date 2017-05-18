@@ -52,12 +52,19 @@ $(document).ready(function () {
   var tweetForm = $("#tweet-submission");
   var textArea = $("textarea");
 
+  // $("#blank-tweet").fadeOut();
+  // $("#too-many-char").fadeOut();
+
   tweetForm.submit(function (event) {
     event.preventDefault();
     if (textArea.val().length === 0) {
-      alert('Cannot be empty string'); 
+      $("#blank-tweet").fadeIn("slow").delay(1500).fadeOut(
+        function () { $("textarea").focus()}
+      ); 
     } else if (textArea.val().length > 140) {
-      alert('Tweet exceeded 140 characters')
+      $("#too-many-char").fadeIn("slow").delay(1500).fadeOut(
+        function () { $("textarea").focus()}
+      );
     } else {
       $.ajax({
         url:"/tweets",

@@ -31,3 +31,9 @@ h2::after {
 .negative {
   color: red;
 }
+
+.new-tweet > div {
+  display: none;
+  color: red;
+  padding-left: 50px;
+}

@@ -25,5 +25,16 @@ nav {
 
 #compose {
   float: right;
-  border: 1px solid red;
+  padding-right: 10em;
+  padding-top: 5px;
+  height: 70px;
+  opacity: 0.7;
+}
+
+#compose:hover {
+  opacity: 0.85;
+}
+
+#compose:active {
+  opacity: 1;
 }
