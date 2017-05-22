@@ -1,3 +1,6 @@
+/// Displaying a character counter for text typed into the text area 
+/// Will change to red when text exceeds 140 characters
+
 
 $(document).ready(function() {
   $("textarea").on('keyup', function () {

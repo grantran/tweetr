@@ -21,10 +21,6 @@ body {
   font-family: "Roboto Condensed", sans-serif; 
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  main {
   position: relative; 
   width: 450px; 
@@ -33,7 +29,6 @@ body {
   padding-top: 140px
  }
 
-/* Rendering hard coded tweet */
 
 .tweet {
   border: 1px solid black;
@@ -58,6 +53,7 @@ body {
 .tweet:hover > header > h4 {
   text-decoration: underline;
 }
+
 
 .tweet header img {
   position: relative;
@@ -118,4 +114,75 @@ footer > div > img {
   /*border: 1px solid red;*/
 }
 
+/*this is for retweet*/
 
+.tweet:hover > footer > div > #emptyRetweet {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 2px;
+  height: 18px;
+  margin: 3px;
+  right: -31px;
+}
+
+.tweet:hover > footer > div > #filledRetweet {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 2px;
+  height: 18px;
+  margin: 3px;
+  right: -58px;
+  z-index: 1;
+}
+
+/*this is for flag */
+
+.tweet:hover > footer > div > #unflagged {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 2px;
+  height: 18px;
+  margin: 3px;
+  right: -10px;
+}
+
+.tweet:hover > footer > div > #flagged {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 2px;
+  height: 18px;
+  margin: 3px;
+  right: -37px;
+  z-index: 1;
+}
+
+/*this is for the like button */
+
+.tweet:hover > footer > div > #dislike {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 2px;
+  height: 18px;
+  margin: 3px;
+  right: 10px;
+}
+
+.tweet:hover > footer > div > #like {
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 2px;
+  height: 18px;
+  margin: 3px;
+  right: -16px;
+  z-index: 1;
+}
+
+.tweet:hover > footer > div > .front {
+  z-index: 2
+}
