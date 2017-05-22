@@ -2,16 +2,17 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This web application allows you to post tweets restricted to 140 characters, and post them live on the tweet feed. Username, handle, and avatar is randomly generated. Pseudo-like, favourite, and re-tweet buttons are available for clicking. 
 
-## Getting Started
+## Final Product 
+!["Screenshot of the tweet composition field"](https://github.com/grantran/tweetr/blob/master/docs/compose-tweet.png)
+!["Screenshot of a live-update tweet and buttons"](https://github.com/grantran/tweetr/blob/master/docs/tweet-buttons.png)
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance 
+- mongodb
